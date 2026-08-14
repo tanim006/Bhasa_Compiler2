@@ -1,0 +1,6 @@
+declare integer x = 10;
+declare integer y = 20;
+
+x = x + y;
+
+print(x);
