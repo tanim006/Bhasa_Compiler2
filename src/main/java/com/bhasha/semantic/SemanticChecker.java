@@ -10,9 +10,9 @@ public class SemanticChecker {
 private final Map<String, Type> variables = new HashMap<>(); 
 private final Set<String> assignedVariables = new HashSet<>(); 
 public void check(List<Stmt> statements) { 
-for (Stmt statement : statements) { 
-checkStatement(statement); 
-} 
+    for (Stmt statement : statements) { 
+        checkStatement(statement); 
+    } 
 } 
 // ========================= 
 // CHECK STATEMENTS 
@@ -256,13 +256,4 @@ private void checkStatement(Stmt statement) {
 // ========================= 
 private boolean isZero(NumberExpr number) { 
 return Double.parseDouble(number.value()) == 0.0; 
-} 
-// ========================= 
-// ERROR HANDLER 
-// ========================= 
-private void error(String message) { 
-throw new RuntimeException( 
-"Semantic Error: " + message 
-); 
-} 
 } 
