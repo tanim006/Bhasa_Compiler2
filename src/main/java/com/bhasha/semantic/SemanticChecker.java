@@ -257,3 +257,12 @@ private void checkStatement(Stmt statement) {
 private boolean isZero(NumberExpr number) { 
 return Double.parseDouble(number.value()) == 0.0; 
 } 
+// ========================= 
+// ERROR HANDLER 
+// ========================= 
+private void error(String message) { 
+throw new RuntimeException( 
+"Semantic Error: " + message 
+); 
+} 
+} 
